@@ -18,6 +18,10 @@ artist_table_create = ("create table if not exists artists (artist_id varchar pr
 
 time_table_create = ("create table if not exists time (start_time timestamp, hour int , day int, week int, month int, year int, weekday varchar)")
 
+add_foreign_keys="alter table songplays ADD CONSTRAINT fk_users FOREIGN KEY (user_id) REFERENCES  users(user_id),\
+ADD CONSTRAINT fk_songs FOREIGN KEY(song_id) REFERENCES songs(song_id),\
+ADD CONSTRAINT fk_artists FOREIGN KEY(artist_id) REFERENCES artist(artist_id);"
+
 # INSERT RECORDS
 
 
