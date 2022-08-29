@@ -6,24 +6,35 @@ Here I built an ETL pipeline that extracts their data from S3 then stages them i
 Database design: 
 -Data schema is star schema where songplays is a fact table and users,songs,artists and time are dimensional tables
 ETL pipeline:
-#1-load song json files from s3 into staging tables
-#2-load data from stages tables to final analytical star schema tables on Redshift,Transform some data before insertion like timestamp and extracting time data
+
+1-load song json files from s3 into staging tables
+
+2-load data from stages tables to final analytical star schema tables on Redshift,Transform some data before insertion like timestamp and extracting time data
 
 # Files Descritpion
-#1-dwh.cfg file is configuration file where info about s3,cluster and role is saved
-#2-sql_queries.py python code file contains sql scripts for the whole project
-#3-create_table.py python code file that contains function to run sql queries file
-#4-etl.py python code file contains implementation of ETL and functions to run sql queries
+1-dwh.cfg file is configuration file where info about s3,cluster and role is saved
+
+2-sql_queries.py python code file contains sql scripts for the whole project
+
+3-create_table.py python code file that contains function to run sql queries file
+
+4-etl.py python code file contains implementation of ETL and functions to run sql queries
+
 
 # How to Run Project
-#1-create AWS Role and Redshift Cluster 
-#2-edit dwh.cfg file with cluster credentials
-#3-open terminal run create_tables.py then etl.py
+1-create AWS Role and Redshift Cluster
+
+2-edit dwh.cfg file with cluster credentials
+
+3-open terminal run create_tables.py then etl.py
 
 
 
 # Examples of analytics queries: 
 #Count of paid and unpaid users
-#![Results screenshot](https://github.com/samas2015/Data-Engineering-Nanodegree-Program/blob/main/Data%20Warehouse/q1.PNG)
+
+![Results screenshot](https://github.com/samas2015/Data-Engineering-Nanodegree-Program/blob/main/Data%20Warehouse/q1.PNG)
+
 #Get top 5 played songs titles and their artists
-#![Results screenshot](https://github.com/samas2015/Data-Engineering-Nanodegree-Program/blob/main/Data%20Warehouse/q2.PNG)
+
+![Results screenshot](https://github.com/samas2015/Data-Engineering-Nanodegree-Program/blob/main/Data%20Warehouse/q2.PNG)
