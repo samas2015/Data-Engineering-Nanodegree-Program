@@ -24,6 +24,6 @@ ETL pipeline:
 
 # Examples of analytics queries: 
 #Count of paid and unpaid users
-![Results screenshot](https://ibb.co/fCCJp09)
+#![Results screenshot](https://ibb.co/fCCJp09)
 #Get top 5 played songs titles and their artists
-![Results screenshot](https://ibb.co/gRkGyp6)
+#![Results screenshot](https://ibb.co/gRkGyp6)
