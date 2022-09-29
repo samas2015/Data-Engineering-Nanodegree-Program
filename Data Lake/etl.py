@@ -30,7 +30,7 @@ def process_song_data(spark, input_data, output_data):
     """
     
     # get filepath to song data file
-    song_data = "s3a://udacity-dend/song_data/A/B/C/*.json"
+    song_data = "s3a://udacity-dend/song_data/*/*/*/*.json"
     
     # read song data file
     df = spark.read.json(song_data)
@@ -64,7 +64,7 @@ def process_log_data(spark, input_data, output_data):
     """
     
     # get filepath to log data file
-    log_data = "s3a://udacity-dend/log_data/2018/11/*.json"
+    log_data = "s3a://udacity-dend/log_data/*/*/*.json"
 
     # read log data file
     df =  spark.read.json(log_data)
