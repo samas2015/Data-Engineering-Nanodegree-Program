@@ -27,8 +27,7 @@ class LoadDimensionOperator(BaseOperator):
         
         if self.append==False:
             self.log.info("Clearing data from {} destination Redshift table".format(self.table))
-        redshift.run("DELETE FROM {}".format(self.table))
-        
+            redshift.run("DELETE FROM {}".format(self.table))
         self.log.info('Populating dimentsion table')
         redshift.run(self.sql_load_param)
       
